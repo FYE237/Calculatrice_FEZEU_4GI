@@ -1,29 +1,36 @@
 <div class="calculator">
-<div class="sceau">
-  <div class="calculator-screen">{{calcul}}</div>
-</div>
-  <div class="calculator-keys">
+  
+    <div class="calculator-screen">
+      <div class="sceau">{{sequence}}</div>
+      <div>  
+      <p class="calco">
+        {{calcul}}
+        </p>
+      </div>
+          </div>
+    <div class="calculator-keys">
+  
+      <button type="button" class="operator" (click)="add()">+</button>
+      <button type="button" class="operator" (click)="sub()">-</button>
+      <button type="button" class="operator" (click)="produit()">&times;</button>
+      <button type="button" class="operator" (click)="div()">&divide;</button>
+  
+      <button type="button" (click)="function('7')">7</button>
+      <button type="button" (click)="function('8')">8</button>
+      <button type="button" (click)="function('9')">9</button>          
+  
+      <button type="button" (click)="function('4')">4</button>
+      <button type="button" (click)="function('5')">5</button>
+      <button type="button" (click)="function('6')">6</button>
+  
+      <button type="button" (click)="function('1')">1</button>
+      <button type="button" (click)="function('2')">2</button>
+      <button type="button" (click)="function('3')">3</button>
+  
+      <button type="button" (click)="function('0')">0</button>
+      <button type="button" class="decimal" (click)="decimal()">.</button>
+      <button type="button" class="all-clear" (click)="clear()">AC</button>
+      <button type="button" class="all-clear" (click)="effacer()">DEL</button>
 
-    <button type="button" class="operator" (click)="add()" value="+">+</button>
-    <button type="button" class="operator" (click)="sub()" value="-">-</button>
-    <button type="button" class="operator" (click)="produit()" value="*">&times;</button>
-    <button type="button" class="operator" (click)="div()" value="/">&divide;</button>
-
-    <button type="button" (click)="function7()" value="7">7</button>
-    <button type="button" (click)="function8()" value="8">8</button>
-    <button type="button" (click)="function9()" value="9">9</button>          
-
-    <button type="button" (click)="function4()" value="4">4</button>
-    <button type="button" (click)="function5()" value="5">5</button>
-    <button type="button" (click)="function6()" value="6">6</button>
-
-    <button type="button" (click)="function1()" value="1">1</button>
-    <button type="button" (click)="function2()" value="2">2</button>
-    <button type="button" (click)="function3()" value="3">3</button>
-
-    <button type="button" (click)="function0()" value="0">0</button>
-    <button type="button" class="decimal" (click)="decimal()" value=".">.</button>
-    <button type="button" class="all-clear" (click)="clear()" value="all-clear">AC</button>
-
-    <button type="button" class="equal-sign" (click)="egal()" value="=">=</button>
-  </div></div>
+      <button type="button" class="equal-sign" (click)="egal()" value="=">=</button>
+    </div></div>

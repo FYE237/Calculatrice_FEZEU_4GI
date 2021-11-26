@@ -1,4 +1,6 @@
 .calculator {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 5px;
     position: absolute;
@@ -9,23 +11,32 @@
     background-color: black;
   }
 
-  
+  .calco{
+    overflow: auto;
+  }
 
   .calculator-screen {
     width: 95%;
-    font-size: 4rem;
-    height: 80px;
+    font-size: 3rem;
+    border-radius: 10px;
+    height: 150px;
     border: none;
     background-color: rgb(206, 201, 137);
     text-align: right;
     margin-top: 13px;
-    margin-bottom: 3px;
+    margin-bottom: 0.5px;
     margin-left: 10px;
-   margin-right: 10px;
+    margin-right: 10px;
     
     /*padding-right: 10px;
     padding-left: 10px;*/
   }
+
+  .sceau {
+    overflow: auto;
+  }
+
+  
 
   button {
     height: 60px;
@@ -63,7 +74,7 @@
     border-color: #337cac;
     color: #fff;
     height: 100%;
-    grid-area: 2 / 4 / 6 / 5;
+    grid-area: 5 / 4  / 2 / 4;
   }
 
   .equal-sign:hover {
