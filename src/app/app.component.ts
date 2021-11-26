@@ -1,3 +1,4 @@
+import { syntaxError } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -15,6 +16,7 @@ export class AppComponent {
   res=0;
 
   setOperation1(op: string){
+    if (this.getOperation1() == "SYNTAXE ERROR") this.op1="";
     this.op1=this.op1+op;
   }
   setOperation2(op: string){
@@ -202,7 +204,12 @@ export class AppComponent {
     }
 
     if(this.operation == "/") {
-      this.res=this.i/this.j;
+      try {
+        this.res=this.i/this.j;
+      } catch (error) {
+        this.calcul="SYNTAXE ERROR";
+      }
+       
     }
 
     if(this.operation == "-") {
